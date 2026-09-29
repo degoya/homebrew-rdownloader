@@ -12,7 +12,7 @@ Then open <http://127.0.0.1:8710> and follow the setup wizard. The service keeps
 plugins and default download folder in `$(brew --prefix)/var/rdownloader`, and `brew upgrade`
 keeps them. Linux needs glibc 2.39 or newer.
 
-Current version: 1.6.0. The formula is written by the release workflow of
+Current version: 1.6.1. The formula is written by the release workflow of
 [degoya/rDownloader](https://github.com/degoya/rDownloader) with every release — issues and changes go there,
 not here. The handbook's installation page:
 <https://github.com/degoya/rDownloader/wiki/installation>.
