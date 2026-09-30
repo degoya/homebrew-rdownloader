@@ -12,7 +12,16 @@ Then open <http://127.0.0.1:8710> and follow the setup wizard. The service keeps
 plugins and default download folder in `$(brew --prefix)/var/rdownloader`, and `brew upgrade`
 keeps them. Linux needs glibc 2.39 or newer.
 
-Current version: 1.6.1. The formula is written by the release workflow of
+The desktop capture agent (Click'n'Load, clipboard, `.nzb` files) comes with the first formula;
+the second one starts it at every login, on macOS as a LaunchAgent in the login session:
+
+```bash
+brew install degoya/rdownloader/rdownloader-capture
+rdownloader-capture configure --token-stdin   # the capture token from Settings → Desktop client
+brew services start rdownloader-capture
+```
+
+Current version: 1.7.0. The formulas are written by the release workflow of
 [degoya/rDownloader](https://github.com/degoya/rDownloader) with every release — issues and changes go there,
 not here. The handbook's installation page:
 <https://github.com/degoya/rDownloader/wiki/installation>.

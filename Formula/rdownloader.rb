@@ -4,7 +4,7 @@
 class Rdownloader < Formula
   desc "Local-first download manager with a web interface"
   homepage "https://rdownloader.net"
-  version "1.6.1"
+  version "1.7.0"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -14,23 +14,23 @@ class Rdownloader < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/degoya/rDownloader/releases/download/v1.6.1/rdownloader-macos-aarch64.tar.gz"
-      sha256 "eaa3eec9beaba5fd1571723602cfe8a0fe4d3c0bbbecb7950b6b8a0ed70acce3"
+      url "https://github.com/degoya/rDownloader/releases/download/v1.7.0/rdownloader-macos-aarch64.tar.gz"
+      sha256 "1299031f6ee1f4063a4c86055cc0adf8f549b3c4ac5b8f5b6417054c38f17158"
     end
     on_intel do
-      url "https://github.com/degoya/rDownloader/releases/download/v1.6.1/rdownloader-macos-x86_64.tar.gz"
-      sha256 "fb7a609b62b8b1980de11721c365f2a6dfed9f8b2bda30d8cfd674590c3c3c37"
+      url "https://github.com/degoya/rDownloader/releases/download/v1.7.0/rdownloader-macos-x86_64.tar.gz"
+      sha256 "f5925c53ef4c67e74429279755f85e902f240a4d9e21f89c27181b07f6c3dadc"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/degoya/rDownloader/releases/download/v1.6.1/rdownloader-linux-aarch64.tar.gz"
-      sha256 "5aa48fa98841ebeda5a1b5b1b787be0006e97fcebd384f1a53e4fed5246eec63"
+      url "https://github.com/degoya/rDownloader/releases/download/v1.7.0/rdownloader-linux-aarch64.tar.gz"
+      sha256 "9ebca23ebb0f6fbfd7e01307e7ef7e7dcc0cccae7296279cef104fb114748c7e"
     end
     on_intel do
-      url "https://github.com/degoya/rDownloader/releases/download/v1.6.1/rdownloader-linux-x86_64.tar.gz"
-      sha256 "85b3ad1fd95e2a02404b283eb84e123816e92b007505ff4892d3cef007c2a26d"
+      url "https://github.com/degoya/rDownloader/releases/download/v1.7.0/rdownloader-linux-x86_64.tar.gz"
+      sha256 "964daee9405251a6c8e5e3898c741585b405c6a9fb8b1636e457dcabdf3a5468"
     end
   end
 
@@ -57,8 +57,12 @@ class Rdownloader < Formula
 
       The service runs in #{var}/rdownloader: the database and the installed plugins in data/,
       the default download folder in downloads/. Upgrades keep both. Leave the autostart to
-      `brew services`: `rdownloader autostart install` would register this version's path,
-      which the next upgrade removes.
+      `brew services`: it starts the service in that folder, while `rdownloader autostart
+      install` would start it with its working folder inside the installation.
+
+      The desktop capture agent (Click'n'Load, clipboard, .nzb files) is installed beside it; its
+      own formula starts it at every login:
+        brew install degoya/rdownloader/rdownloader-capture
 
       Media, stream and archive features need their external tools, for example:
         brew install ffmpeg yt-dlp
