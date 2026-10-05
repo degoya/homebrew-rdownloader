@@ -21,7 +21,7 @@ rdownloader-capture configure --token-stdin   # the capture token from Settings 
 brew services start rdownloader-capture
 ```
 
-Current version: 1.9.1. The formulas are written by the release workflow of
+Current version: 1.10.0. The formulas are written by the release workflow of
 [degoya/rDownloader](https://github.com/degoya/rDownloader) with every release — issues and changes go there,
 not here. The handbook's installation page:
 <https://github.com/degoya/rDownloader/wiki/installation>.
