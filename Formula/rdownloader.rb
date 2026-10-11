@@ -4,7 +4,7 @@
 class Rdownloader < Formula
   desc "Local-first download manager with a web interface"
   homepage "https://rdownloader.net"
-  version "1.24.0"
+  version "1.25.0"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -14,23 +14,23 @@ class Rdownloader < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/degoya/rDownloader/releases/download/v1.24.0/rdownloader-macos-aarch64.tar.gz"
-      sha256 "13742ecc8104adf6166b654c1ea19892d3d8e915f1e192da9e2cf829779d6c9f"
+      url "https://github.com/degoya/rDownloader/releases/download/v1.25.0/rdownloader-macos-aarch64.tar.gz"
+      sha256 "8b6967027945f6f62ef9744f23509d26663977c3fa5fd58099797db191088cb1"
     end
     on_intel do
-      url "https://github.com/degoya/rDownloader/releases/download/v1.24.0/rdownloader-macos-x86_64.tar.gz"
-      sha256 "b065a028a8d1cfdc793973381582602dc1939e38bf7b3a7b1e7db6c0f160df26"
+      url "https://github.com/degoya/rDownloader/releases/download/v1.25.0/rdownloader-macos-x86_64.tar.gz"
+      sha256 "f00b76f4810648528af24dc36ef06f36217d82dbf95100a5d4b779a156446a91"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/degoya/rDownloader/releases/download/v1.24.0/rdownloader-linux-aarch64.tar.gz"
-      sha256 "8e6097b6b7956b4d078ac324bf2eb0106f20f4dec9e6b636922ac5a72b99825e"
+      url "https://github.com/degoya/rDownloader/releases/download/v1.25.0/rdownloader-linux-aarch64.tar.gz"
+      sha256 "7448fe7c5604fd61abe051fb61ae18d8ac03ed62092c3b3b79219b9c35e1a212"
     end
     on_intel do
-      url "https://github.com/degoya/rDownloader/releases/download/v1.24.0/rdownloader-linux-x86_64.tar.gz"
-      sha256 "e7af67f6aa1d455733e88736e71d86e0ff2136a95b8c88bbb6c5e13fdf69da81"
+      url "https://github.com/degoya/rDownloader/releases/download/v1.25.0/rdownloader-linux-x86_64.tar.gz"
+      sha256 "85f2a070bf5a2ebedde95d47641a6d7cd860ac3f93184605b6034e4c7fa48a06"
     end
   end
 
