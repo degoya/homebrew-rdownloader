@@ -9,7 +9,7 @@
 class RdownloaderCapture < Formula
   desc "Desktop agent handing Click'n'Load, clipboard and NZB files to rDownloader"
   homepage "https://rdownloader.net"
-  version "1.28.0"
+  version "1.28.1"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -21,23 +21,23 @@ class RdownloaderCapture < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/degoya/rDownloader/releases/download/v1.28.0/rdownloader-macos-aarch64.tar.gz"
-      sha256 "77ec9cd22b74ef77481dbe2ba63ff5c376ac70bea6f40ad1cb2ba7b6f61b00c1"
+      url "https://github.com/degoya/rDownloader/releases/download/v1.28.1/rdownloader-macos-aarch64.tar.gz"
+      sha256 "6abd7472c6032fdbac5980005e0258e5a368c54e565aede2d857ab0e99279310"
     end
     on_intel do
-      url "https://github.com/degoya/rDownloader/releases/download/v1.28.0/rdownloader-macos-x86_64.tar.gz"
-      sha256 "5fef3806732a68ceff00975432791a9b24935eb9090fc0840bcac6158999e717"
+      url "https://github.com/degoya/rDownloader/releases/download/v1.28.1/rdownloader-macos-x86_64.tar.gz"
+      sha256 "15be1744797821d6a26d6dab93ebea839ba11af6149677119eb136d9faeb7438"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/degoya/rDownloader/releases/download/v1.28.0/rdownloader-linux-aarch64.tar.gz"
-      sha256 "86fcaddd133b9404a709628f94c5596239c9f29c81e23688be90733e4fd280df"
+      url "https://github.com/degoya/rDownloader/releases/download/v1.28.1/rdownloader-linux-aarch64.tar.gz"
+      sha256 "68742ce654805913a4a1d6f356acad496587e1277d4a59adf8757b8932a5f1bf"
     end
     on_intel do
-      url "https://github.com/degoya/rDownloader/releases/download/v1.28.0/rdownloader-linux-x86_64.tar.gz"
-      sha256 "b2d38d1fdf7e456154faae1bdf0a3e7a2ed24cc25bbcba189038f41d2b9c9172"
+      url "https://github.com/degoya/rDownloader/releases/download/v1.28.1/rdownloader-linux-x86_64.tar.gz"
+      sha256 "06ef9fc356bb269a12ee216b9a8d37f2e03f91002614f3ffebb299aafb2d8f3f"
     end
   end
 
