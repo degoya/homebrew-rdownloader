@@ -5,11 +5,11 @@
 # Homebrew allows one service per formula, and rdownloader's is the service. This formula carries
 # the second one: it runs the rdownloader-capture that formula installs. A formula needs a url and
 # a keg that is not empty, so it names the same archives with the same SHA-256 — Homebrew's cache
-# is keyed by the URL, so nothing is downloaded twice — and keeps their README and LICENSE.
+# is keyed by the URL, so nothing is downloaded twice — and keeps their README and licence texts.
 class RdownloaderCapture < Formula
   desc "Desktop agent handing Click'n'Load, clipboard and NZB files to rDownloader"
   homepage "https://rdownloader.net"
-  version "1.47.0"
+  version "1.48.0"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -21,30 +21,30 @@ class RdownloaderCapture < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/degoya/rDownloader/releases/download/v1.47.0/rdownloader-macos-aarch64.tar.gz"
-      sha256 "2c27b7314a6f1abed925219eba4117363510ace6d6b37172404cab281364d221"
+      url "https://github.com/degoya/rDownloader/releases/download/v1.48.0/rdownloader-macos-aarch64.tar.gz"
+      sha256 "842c9e6a957be3bcbb83bc6a1fe05b7bd32982722cc9defcf14829b50f439e1c"
     end
     on_intel do
-      url "https://github.com/degoya/rDownloader/releases/download/v1.47.0/rdownloader-macos-x86_64.tar.gz"
-      sha256 "e0f3202cf2d7fcf95c65024a947233918ee180ee93c8b4c3cf0e7af822789736"
+      url "https://github.com/degoya/rDownloader/releases/download/v1.48.0/rdownloader-macos-x86_64.tar.gz"
+      sha256 "61b76f4c12d7127f35dbb4367e98c1b2914531b5f6f9cc786e5ef2696c184ff4"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/degoya/rDownloader/releases/download/v1.47.0/rdownloader-linux-aarch64.tar.gz"
-      sha256 "362957ace4e9576275810e13fe881bf98cb48fc4ed3f5459b4855c39ffbe133b"
+      url "https://github.com/degoya/rDownloader/releases/download/v1.48.0/rdownloader-linux-aarch64.tar.gz"
+      sha256 "d03417d66c4cc4b3302bb5fee0709a378c812590bd30856122adec69c8853051"
     end
     on_intel do
-      url "https://github.com/degoya/rDownloader/releases/download/v1.47.0/rdownloader-linux-x86_64.tar.gz"
-      sha256 "01d9b472bb61084b56abe6fd0d3f5564a0d27549dc2a3720aeadf65029301a48"
+      url "https://github.com/degoya/rDownloader/releases/download/v1.48.0/rdownloader-linux-x86_64.tar.gz"
+      sha256 "ec7fa227e559ab32a427fae6eab6bde01ee270fd964a8d505511c7b4db60fda2"
     end
   end
 
   def install
     # The executable stays in rdownloader's keg, which links bin/rdownloader-capture already; a
     # second copy here would be a link conflict and a second version to keep in step.
-    doc.install "README.md", "LICENSE"
+    doc.install "README.md", "LICENSE", "THIRD-PARTY-NOTICES.txt"
   end
 
   def caveats
